@@ -84,6 +84,10 @@ module Rubygoal
       # me.losing? y me.draw? son análogos al anterior :)
       # me.score me indica la cantidad exacta de goles que marcó mi equipo
       if match.me.winning?
+        formation.lineup = aggressive
+      end
+
+      if match.me.draw?
         formation.lineup = conservative
       end
 
